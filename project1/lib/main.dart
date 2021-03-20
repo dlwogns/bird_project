@@ -6,7 +6,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(scaffoldBackgroundColor: Colors.lightGreen[100]),
+      //필요없는 코드 시작. 머지할 때 삭제해주세요.
+      theme: ThemeData(scaffoldBackgroundColor: Colors.black
+      //필요없는 코드 끝
+      ),
       title: 'MineCraft Guide',
       home: MyHomePage(),
     );
