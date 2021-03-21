@@ -6,7 +6,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-<<<<<<< HEAD
       //1. 앱바 색상, 배경색상, 텍스트 글씨체 등등 앱의 전체적인 디자인 테마는 화면마다 설정해주지 말고 여기서 한번에 지정해줄 것.
       //특별한 화면 구성이 필요할 때만 해당 화면에서 지정해주는 것이 좋다.(만들때, 수정할 때)
       theme: ThemeData(
@@ -15,12 +14,6 @@ class MyApp extends StatelessWidget {
               color: Colors.white,
               textTheme: TextTheme(title: TextStyle(color: Colors.red)),
               centerTitle: true)),
-=======
-      //필요없는 코드 시작. 머지할 때 삭제해주세요.
-      theme: ThemeData(scaffoldBackgroundColor: Colors.black
-      //필요없는 코드 끝
-      ),
->>>>>>> origin/hanjin
       title: 'MineCraft Guide',
       home: MyHomePage(),
     );
