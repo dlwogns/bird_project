@@ -8,9 +8,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       //1. 앱바 색상, 배경색상, 텍스트 글씨체 등등 앱의 전체적인 디자인 테마는 화면마다 설정해주지 말고 여기서 한번에 지정해줄 것.
       //특별한 화면 구성이 필요할 때만 해당 화면에서 지정해주는 것이 좋다.(만들때, 수정할 때)
-      theme: ThemeData(scaffoldBackgroundColor: Colors.lightGreen[100],
-          appBarTheme: AppBarTheme( color: Colors.white, textTheme: TextTheme(title: TextStyle(color:Colors.red)),centerTitle: true )
-      ),
+      theme: ThemeData(
+          scaffoldBackgroundColor: Colors.lightGreen[100],
+          appBarTheme: AppBarTheme(
+              color: Colors.white,
+              textTheme: TextTheme(title: TextStyle(color: Colors.red)),
+              centerTitle: true)),
       title: 'MineCraft Guide',
       home: MyHomePage(),
     );
@@ -79,7 +82,6 @@ void onpressed(context) {
 //  );
 //}
 
-
 class totalListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -123,23 +125,24 @@ class search_card extends StatelessWidget {
 }
 
 class guide_card extends StatelessWidget {
-  Widget myButton(context, String buttonName, Icon buttonIcon){
+  Widget myButton(context, String buttonName, Icon buttonIcon) {
     return Expanded(
         child: Column(
-          children: <Widget>[
-            IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => new_screen()),
-                );
-              },
-              icon: buttonIcon,
-            ),
-            Text(buttonName),
-          ],
-        ));
+      children: <Widget>[
+        IconButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => new_screen()),
+            );
+          },
+          icon: buttonIcon,
+        ),
+        Text(buttonName),
+      ],
+    ));
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -165,72 +168,14 @@ class guide_card extends StatelessWidget {
               myButton(context, "버튼 2", Icon(Icons.block)),
               myButton(context, "버튼 3", Icon(Icons.update)),
               myButton(context, "버튼 4", Icon(Icons.access_alarm)),
-
-
             ],
           ),
           Row(
             children: <Widget>[
-              Expanded(
-                  child: Column(
-                children: <Widget>[
-                  IconButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => new_screen()),
-                      );
-                    },
-                    icon: Icon(Icons.add),
-                  ),
-                  Text('button'),
-                ],
-              )),
-              Expanded(
-                  child: Column(
-                children: <Widget>[
-                  IconButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => new_screen()),
-                      );
-                    },
-                    icon: Icon(Icons.add),
-                  ),
-                  Text('button'),
-                ],
-              )),
-              Expanded(
-                  child: Column(
-                children: <Widget>[
-                  IconButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => new_screen()),
-                      );
-                    },
-                    icon: Icon(Icons.add),
-                  ),
-                  Text('button'),
-                ],
-              )),
-              Expanded(
-                  child: Column(
-                children: <Widget>[
-                  IconButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => new_screen()),
-                      );
-                    },
-                    icon: Icon(Icons.add),
-                  ),
-                  Text('button'),
-                ],
-              )),
+              myButton(context, "버튼 5", Icon(Icons.delete)),
+              myButton(context, "버튼 6", Icon(Icons.block)),
+              myButton(context, "버튼 7", Icon(Icons.update)),
+              myButton(context, "버튼 8", Icon(Icons.access_alarm)),
             ],
           ),
         ],
